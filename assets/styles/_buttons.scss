@@ -1,0 +1,28 @@
+.mkbtn {
+    padding: 10px 20px;
+    background-color: $enphasys_color;
+    color: $white;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        background-color: $enphasys_color_hover;
+        transform: scale(1.1);
+    }
+}
+
+.mkbtn_download {
+    padding: 10px 20px;
+    background-color: $enphasys_color;
+    color: $white;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+    border: none;
+
+    &:hover {
+        background-color: $enphasys_color_hover;
+        transform: scale(1.1);
+    }
+}
