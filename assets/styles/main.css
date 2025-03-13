@@ -34,7 +34,7 @@ a {
 }
 .mkbtn_download:hover {
   background-color: #31BE8B;
-  transform: scale(1.1);
+  transform: translateY(-5px);
 }
 
 body {
@@ -49,21 +49,21 @@ body {
 .socialBar {
   position: fixed;
   top: 50%;
-  right: 10px;
+  right: 0.625rem;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  border-radius: 20px;
+  gap: 0.3125rem;
+  border-radius: 1.25rem;
 }
 
 .socialBar_red {
-  padding: 10px;
+  padding: 0.625rem;
   transition: all 0.3s ease;
 }
 .socialBar_red img {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   transition: filter 0.3s ease;
 }
 .socialBar_red:hover img {
@@ -104,10 +104,10 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 40px;
+  padding-left: 2.5rem;
   height: 80vh;
   justify-content: center;
-  gap: 2px;
+  gap: 0.125rem;
   background-image: url("../img/head.png");
   background-size: cover;
   background-position: center;
@@ -123,28 +123,26 @@ header h2 {
 }
 
 main {
-  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* Who i´m */
+/* Who I´m */
 .aboutme {
-  margin: 3.125rem 6.25rem;
+  max-width: 87.5rem;
+  margin: 3rem 0;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-left: 10%;
+  justify-content: space-between;
   text-align: justify;
+  /* Editor de Código */
 }
-.aboutme img {
-  width: 12.5rem;
-  height: 18.75rem;
-  border-radius: 10%;
-  margin-right: 1.25rem;
+.aboutme .aboutme_text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 50%;
 }
 .aboutme h3 {
   color: #009E66;
@@ -162,4 +160,175 @@ main {
 }
 .aboutme .aboutme_info_etiqueta {
   color: #fff;
+}
+.aboutme .code_editor {
+  background: #1e1e1e;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 40%;
+  font-family: "Fira Code", monospace;
+  position: relative;
+  box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
+}
+.aboutme .code_header {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+.aboutme .dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+.aboutme .red {
+  background: #ff5f56;
+}
+.aboutme .yellow {
+  background: #ffbd2e;
+}
+.aboutme .green {
+  background: #27c93f;
+}
+.aboutme pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: 0.85rem;
+}
+
+.portfolio {
+  max-width: 1400px;
+  margin: 3rem 0;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  max-width: 87.5rem;
+}
+.skills h2 {
+  color: #009E66;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.skills span {
+  color: #fff;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
+  font-size: 4rem;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.1;
+}
+.skills .skills_container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.skills .skills_container--item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 0.125rem solid transparent;
+  border-radius: 0.5rem;
+  background-color: #1E1E1E;
+  transition: border-color 0.3s ease;
+  width: 19.75rem;
+  height: 17.5rem;
+  text-align: justify;
+}
+.skills .skills_container--item:hover {
+  border-color: #31BE8B;
+}
+.skills .skills_container--item img {
+  width: 4.375rem;
+  height: 4.375rem;
+}
+.skills .skills_container--item h3 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.tools {
+  display: flex;
+  flex-direction: row;
+  max-width: 1400px;
+  justify-content: space-between;
+  margin: 3rem 0;
+}
+.tools .tools_title {
+  max-width: 50%;
+}
+.tools .tools_title h2 {
+  color: #009E66;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.tools .tools_container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.tools .tools_container img {
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+}
+
+.resume {
+  max-width: 1400px;
+  margin: 3rem 0;
+}
+
+.faq {
+  max-width: 1400px;
+  margin: 3rem 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #009E66;
+  color: #fff;
+}
+footer .footer_contact {
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+  margin: 2% 0px;
+}
+footer .footer_contact--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+footer .footer_contact--info img {
+  width: 45px;
+  height: 45px;
+}
+footer .footer_contact--info h3 {
+  cursor: default;
+}
+footer .footer_contact--info a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer .footer_contact--info a:hover {
+  font-weight: 800;
+  transform: scale(1.1);
+}
+footer p {
+  cursor: default;
 }/*# sourceMappingURL=main.css.map */

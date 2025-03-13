@@ -8,6 +8,7 @@
         content="Descubre el portafolio de Mikkel, desarrollador full stack con experiencia en Laravel, Java y tecnologías web. Explora proyectos innovadores y soluciones eficientes.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&amp;family=Lexend+Giga&amp;display=swap"
         rel="stylesheet">
@@ -15,6 +16,7 @@
 </head>
 
 <body>
+    <!-- Social Bar -->
     <div class="socialBar">
         <a class="socialBar_red" href="https://github.com/MLlAlonso" target="_blank"><img src="assets/img/github.png"
                 alt="GitHub"></a>
@@ -31,7 +33,6 @@
     </div>
 
     <!-- NavBar -->
-    <script src="assets/js/nav.js"></script>
     <nav>
         <ul class="nav_links">
             <li><a href="#aboutme">Quien soy</a></li>
@@ -45,7 +46,6 @@
     </nav>
 
     <!-- Header -->
-    <script src="assets/js/header.js"></script>
     <header>
         <h2>Hola</h2>
         <h1 id="animated-text">Soy <span id="dynamic-text"></span></h1>
@@ -55,94 +55,187 @@
 
     <main>
         <!-- Who I´m -->
-        <div class="aboutme" id="aboutme">
-            <div>
-                <img src="assets/img/grey.jpg" alt="Mikkel Llaven Alonso">
+        <section class="aboutme" id="aboutme">
+            <!-- Contenedor del editor de código -->
+            <div class="code_editor">
+                <div class="code_header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <pre><code id="code-container" class="language-php"></code></pre>
             </div>
 
-            <div>
-                <h3>¿Quién soy?</h3>
-                <h2>
-                    Soy Mikkel Llaven Alonso, Ingeniero de Software con experiencia en desarrollo Full Stack
-                </h2>
-                <p>Ingeniero de Software especializado en desarrollo web full stack y gestión de proyectos. Experiencia
-                    en análisis de requisitos, diseño de interfaces y pruebas funcionales, con dominio de PHP (Laravel),
-                    HTML, CSS, Java y SQL. Nivel intermedio de inglés (B2) y conocimientos básicos de francés
-                    (A2) y japonés (A1).</p>
+            <!-- Información -->
+            <div class="aboutme_text">
+                <div>
+                    <h3>¿Quién soy?</h3>
+                    <h2>
+                        Soy Mikkel Llaven Alonso, Ingeniero de Software con experiencia en desarrollo Full Stack
+                    </h2>
+                    <p>Ingeniero de Software especializado en desarrollo web full stack y gestión de proyectos.
+                        Experiencia
+                        en análisis de requisitos, diseño de interfaces y pruebas funcionales, con dominio de PHP
+                        (Laravel),
+                        HTML, CSS, Java y SQL. Nivel intermedio de inglés (B2) y conocimientos básicos de francés (A2) y
+                        japonés (A1).
+                    </p>
 
-                <div class="aboutme_info">
-                    <p class="aboutme_info_etiqueta">Name</p><p>Mikkel Alonso</p>
-                    <p class="aboutme_info_etiqueta">De</p><p>Veracruz, México</p>
+                    <a href="assets/docs/CV_Mikkel_Llaven.pdf" download="CV_Mikkel_Llaven.pdf">
+                        <button class="mkbtn_download">Descargar CV</button>
+                    </a>
                 </div>
-
-                <div class="aboutme_info">
-                    <p class="aboutme_info_etiqueta">Edad</p><p>24</p>
-                    <p class="aboutme_info_etiqueta">Email</p><p>mikkel_03@outlook.com</p>
-                </div>
-
-                <a href="assets/docs/CV_Mikkel_Llaven.pdf" download="CV_Mikkel_Llaven.pdf">
-                    <button class="mkbtn_download">Descargar CV</button>
-                </a>
             </div>
-        </div>
+        </section>
 
         <!-- Projects -->
-        <div class="portfolio" id="portfolio">
+        <section class="portfolio" id="portfolio">
             <h2>Portafolio</h2>
             <p>Aqui iran los enlaces, imagenes, etc a los proyectos que he realizado</p>
-        </div>
+        </section>
+
+
+
+
 
         <!-- Skills -->
-        <div class="skills" id="skills">
-            <h2>My Skills</h2>
-            <p>Seccion donde iran las habilidades que tengo (php, laravel, html, etc)</p>
-        </div>
+        <section class="skills" id="skills">
+            <h2>
+                Conocimientos
+                <span>Skills</span>
+            </h2>
+
+            <div class="skills_container">
+                <div class="skills_container--item">
+                    <img src="assets/img/skills/php.png" alt="PHP">
+                    <h3>PHP</h3>
+                    <p>Desarrollo de aplicaciones web escalables y seguras con Laravel, optimizando rendimiento y calidad de código</p>
+                </div>
+
+                <div class="skills_container--item">
+                    <img src="assets/img/skills/html-5.png" alt="HTML">
+                    <h3>HTML</h3>
+                    <p>Estructuración de contenido web, asegurando una experiencia de usuario óptima</p>
+                </div>
+
+                <div class="skills_container--item">
+                    <img src="assets/img/skills/css-3.png" alt="CSS">
+                    <h3>CSS</h3>
+                    <p>Diseño de interfaces web modernas y responsivas, considerando la usabilidad</p>
+                </div>
+            </div>
+
+            <div class="skills_container">
+                <div class="skills_container--item">
+                    <img src="assets/img/skills/javascript.png" alt="SQL">
+                    <h3>JavaScript</h3>
+                    <p>Desarrollo de interactividad y funcionalidad, mejorando la experiencia del usuario</p>
+                </div>
+
+                <div class="skills_container--item">
+                    <img src="assets/img/skills/sql.png" alt="SQL">
+                    <h3>SQL</h3>
+                    <p>Diseño y gestión de bases de datos relacionales, garantizando eficiencia y consistencia</p>
+                </div>
+
+                <div class="skills_container--item">
+                    <img src="assets/img/skills/java.png" alt="Java">
+                    <h3>Java</h3>
+                    <p>Desarrollo de aplicaciones robustas y de alto rendimiento</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
 
         <!-- Tools/Technologies -->
-        <div class="tools" id="tools">
-            <h2>Tecnologias</h2>
-            <p>Sección donde iran las tecnologías en las cuales tengo conocimiento, digase github, jira, figma, notion,
-                etc</p>
-        </div>
+        <section class="tools" id="tools">
+            <div class="tools_title">
+                <h2>Herramientas de Desarrollo</h2>
+                <p>Utilizo herramientas como GitHub, Figma, Jira, VS Code y Notion para crear soluciones web eficientes, optimizando el desarrollo y la gestión de proyectos.</p>
+            </div>
+
+            <div class="tools_container">
+                <div class="tool_container--element">
+                    <img src="assets/img/Tools/github.png" alt="GitHub">
+                    <img src="assets/img/Tools/jira.png" alt="Jira">
+                    <img src="assets/img/Tools/figma.png" alt="Figma">
+                </div>
+                <div class="tool_container--element">
+                    <img src="assets/img/Tools/visual-studio.png" alt="Vs Code">
+                    <img src="assets/img/Tools/filezilla.png" alt="filezilla">
+                    <img src="assets/img/Tools/xampp.png" alt="Xampp">
+                </div>
+                <div class="tool_container--element">
+                    <img src="assets/img/Tools/notion.png" alt="Notion">
+                    <img src="assets/img/Tools/uml.png" alt="diagrama UML">
+                    <img src="assets/img/Tools/filmora.png" alt="Filmora">
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
 
         <!-- My Resume -->
-        <div class="my_resume" id="my_resume">
+        <section class="resume" id="my_resume">
             <h2>My resume</h2>
             <p>Aqui ira la experiencia laboral, educativa, etc</p>
-        </div>
+        </section>
 
         <!-- FAQ -->
-        <div class="faq" id="faq">
+        <section class="faq" id="faq">
             <h2>FAQ</h2>
             <p>Preguntas frecuentes</p>
-        </div>
+        </section>
     </main>
 
     <footer>
         <h2>Ponte en contacto conmigo</h2>
-        
-        <div>
-            <div>
-                <img src="" alt="">
+
+        <div class="footer_contact">
+            <div class="footer_contact--info">
+                <img src="assets/img/whatsapp.png" alt="WhatsApp">
                 <h3>WhatsApp</h3>
                 <a href="https://wa.me/529213029641" target="_blank">Enviar mensaje</a>
             </div>
-            
-            <div>
-                <img src="" alt="">
+
+            <div class="footer_contact--info">
+                <img src="assets/img/email.png" alt="Email">
                 <h3>Email</h3>
                 <a href="mailto:mikkel_03@outlook.com">mikkel_03@outlook.com</a>
             </div>
-            
-            <div>
-                <img src="" alt="">
+
+            <div class="footer_contact--info">
+                <img src="assets/img/contact.png" alt="Contacto">
                 <h3>Mi contacto</h3>
                 <a href="tel:+529213029641" download="Mikkel_Llaven_Contact.vcf">+52 921 302 9641</a>
             </div>
         </div>
-        
+
         <p>© 2025 Mikkel Llaven Alonso. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- NavBar -->
+    <script src="assets/js/nav.js"></script>
+
+    <!-- Header -->
+    <script src="assets/js/header.js"></script>
+
+    <!-- Prism.js para resaltar el código -->
+    <script src="assets/js/codeEditor.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-php.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+
 </body>
 
 </html>
