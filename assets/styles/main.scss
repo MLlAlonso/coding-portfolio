@@ -21,6 +21,7 @@ body {
     border-radius: 1.25rem;
 }
 
+// Social Bar styles (Redes Sociales)
 .socialBar_red {
     padding: 0.625rem;
     transition: all 0.3s ease;
@@ -36,7 +37,7 @@ body {
     }
 }
 
-/* Barra de navegación */
+/* NavBar styles (Barra de navegación) */
 nav {
     display: flex;
     justify-content: flex-end;
@@ -51,6 +52,7 @@ body.scrolled nav {
     transition: background-color 0.3s ease;
 }
 
+// Links NavBar styles (Links de la Barra de Navegación)
 .nav_links {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -67,7 +69,7 @@ body.scrolled nav {
     }
 }
 
-/* Header */
+/* Header styles */
 header {
     display: flex;
     flex-direction: column;
@@ -99,7 +101,7 @@ main {
     justify-content: center;
 }
 
-// Who I´m (Sobre mí) 
+// Who I´m styles (Sobre mí) 
 .aboutme {
     max-width: 87.5rem;
     margin: 3rem 0;
@@ -180,7 +182,7 @@ main {
 
 
 
-.portfolio{
+.portfolio {
     max-width: 1400px;
     margin: 3rem 0;
 }
@@ -191,7 +193,7 @@ main {
 
 
 
-// Skills (Lenguajes, Frameworks, etc.)
+// Skills styles (Lenguajes, Frameworks, etc.)
 .skills {
     display: flex;
     flex-direction: column;
@@ -236,6 +238,7 @@ main {
         width: 19.75rem;
         height: 17.5rem;
         text-align: justify;
+
         &:hover {
             border-color: $enphasys_color_hover;
         }
@@ -253,7 +256,7 @@ main {
     }
 }
 
-// Tools (Herramientas)
+// Tools styles (Herramientas)
 .tools {
     display: flex;
     flex-direction: row;
@@ -265,6 +268,7 @@ main {
     .tools_title {
         max-width: 50%;
         margin-right: 3.75rem;
+
         h2 {
             color: $enphasys_color;
             font-size: 1.5rem;
@@ -293,8 +297,8 @@ main {
     }
 }
 
-// Resume (Experiencia Laboral)
-.resume{
+// Resume styles (Experiencia Laboral)
+.resume {
     max-width: 1400px;
     margin: 3rem 0;
 
@@ -328,7 +332,7 @@ main {
             list-style: none;
             width: min(60rem, 90%);
             margin-inline: auto;
-    
+
             &::before {
                 content: "";
                 grid-column: 1;
@@ -336,7 +340,7 @@ main {
                 background: rgb(225, 225, 225);
                 border-radius: calc(var(--line-w) / 2);
             }
-    
+
             .resume__timeline-item {
                 grid-column: 2;
                 --inlineP: 1.5rem;
@@ -345,11 +349,11 @@ main {
                 display: grid;
                 grid-template-rows: min-content min-content min-content;
                 --accent-color: $enphasys_color;
-    
+
                 &:not(:last-child) {
                     margin-bottom: var(--row-gap);
                 }
-    
+
                 .resume__timeline-date {
                     --dateH: 3rem;
                     height: var(--dateH);
@@ -366,7 +370,7 @@ main {
                     font-family: 'Lexend Giga';
                     font-weight: 400;
                     text-transform: uppercase;
-    
+
                     &::before {
                         content: "";
                         width: var(--inlineP);
@@ -378,7 +382,7 @@ main {
                         clip-path: polygon(0 0, 100% 0, 0 100%);
                         right: 0;
                     }
-    
+
                     &::after {
                         content: "";
                         position: absolute;
@@ -392,14 +396,14 @@ main {
                         right: calc(100% + var(--col-gap) + var(--line-w) / 2);
                     }
                 }
-    
+
                 .resume__timeline-title,
                 .resume__timeline-descr {
                     background: var(--bgColor);
                     position: relative;
                     padding-inline: 1.5rem;
                 }
-    
+
                 .resume__timeline-title {
                     overflow: hidden;
                     padding-block-start: 1.5rem;
@@ -407,7 +411,7 @@ main {
                     font-weight: 300;
                     font-family: 'Poppins', sans-serif;
                     color: $white;
-    
+
                     &::before {
                         content: "";
                         position: absolute;
@@ -421,11 +425,11 @@ main {
                         bottom: calc(100% + 0.125rem);
                     }
                 }
-    
+
                 .resume__timeline-descr {
                     padding-block-end: 1.5rem;
                     font-weight: 300;
-    
+
                     &::before {
                         content: "";
                         position: absolute;
@@ -442,33 +446,33 @@ main {
                 }
             }
         }
-    
+
         @media (min-width: 40rem) {
             .resume__timeline {
                 grid-template-columns: 1fr var(--line-w) 1fr;
-    
+
                 &::before {
                     grid-column: 2;
                 }
-    
+
                 .resume__timeline-item:nth-child(odd) {
                     grid-column: 1;
-    
+
                     .resume__timeline-date::before {
                         clip-path: polygon(0 0, 100% 0, 100% 100%);
                         left: 0;
                     }
-    
+
                     .resume__timeline-date::after {
                         transform: translate(-50%, -50%);
                         left: calc(100% + var(--col-gap) + var(--line-w) / 2);
                     }
                 }
-    
+
                 .resume__timeline-item:nth-child(even) {
                     grid-column: 3;
                 }
-    
+
                 .resume__timeline-item:nth-child(2) {
                     grid-row: 2/4;
                 }
@@ -478,21 +482,56 @@ main {
 
 }
 
-
-
-
-
-
-.faq{
-    max-width: 1400px;
+// FAQ styles (Preguntas Frecuentes)
+.faq {
+    max-width: 87.5rem;
     margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        color: $enphasys_color;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    p {
+        color: $text;
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .faq_container {
+        display: flex;
+        flex-direction: column;
+
+        .faq_item {
+            margin: 1rem 0;
+            display: flex;
+            flex-direction: row;
+
+            span {
+                color: $enphasys_color;
+                margin-right: 0.5rem;
+            }
+
+            h3 {
+                width: 43.75rem;
+                color: $white;
+                font-size: 1.5rem;
+            }
+
+            p {
+                width: 40.625rem;
+                margin-left: 1.875rem;
+                font-size: 0.875rem;
+            }
+        }
+    }
 }
 
-
-
-
-
-
+// Footer styles (Contacto)
 footer {
     display: flex;
     flex-direction: column;
@@ -500,7 +539,7 @@ footer {
     align-items: center;
     background-color: $enphasys_color;
     color: $white;
-
+    margin-top: 2rem;
 
     .footer_contact {
         display: flex;
@@ -537,7 +576,7 @@ footer {
         }
     }
 
-    p{
+    p {
         cursor: default;
     }
 }
