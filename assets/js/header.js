@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const texts = ["desarrollador", "Ingeniero de Software", "Freelance", "Mikkel Alonso"];
+    const texts = ["desarrollador", "Ingeniero de Software", "Freelancer", "Mikkel Alonso"];
     let count = 0;
     let index = 0;
     let currentText = '';
