@@ -6,3 +6,12 @@ window.addEventListener('scroll', function() {
         nav.style.backgroundColor = 'transparent';
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav_links");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("nav_active");
+    });
+});
