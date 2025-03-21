@@ -163,27 +163,27 @@ main {
   position: relative;
   box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
-.aboutme .code_header {
+.aboutme .code_editor .code_header {
   display: flex;
   gap: 0.4rem;
   margin-bottom: 0.5rem;
 }
-.aboutme .dot {
+.aboutme .code_editor .dot {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
   display: inline-block;
 }
-.aboutme .red {
+.aboutme .code_editor .red {
   background: #ff5f56;
 }
-.aboutme .yellow {
+.aboutme .code_editor .yellow {
   background: #ffbd2e;
 }
-.aboutme .green {
+.aboutme .code_editor .green {
   background: #27c93f;
 }
-.aboutme pre {
+.aboutme .code_editor pre {
   margin: 0;
   white-space: pre-wrap;
   font-size: 0.85rem;
@@ -202,7 +202,7 @@ main {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.skills span {
+.skills h2 span {
   color: #FFFFFC;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
   font-size: 4rem;
@@ -217,7 +217,7 @@ main {
   justify-content: center;
   align-items: center;
 }
-.skills .skills_container--item {
+.skills .skills_container .skills_container--item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -231,17 +231,25 @@ main {
   height: 17.5rem;
   text-align: justify;
 }
-.skills .skills_container--item:hover {
-  border-color: #37BF32;
-}
-.skills .skills_container--item img {
-  width: 4.375rem;
-  height: 4.375rem;
-}
-.skills .skills_container--item h3 {
+.skills .skills_container .skills_container--item .skills_container--item h3 {
   color: #FFFFFC;
   font-size: 1rem;
   font-weight: 600;
+}
+.skills .skills_container .skills_container--item p {
+  margin: 0 10px;
+}
+.skills .skills_container .skills_container--item span {
+  color: #FFFFFC;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.skills .skills_container .skills_container--item:hover {
+  border-color: #37BF32;
+}
+.skills .skills_container .skills_container--item img {
+  width: 4.375rem;
+  height: 4.375rem;
 }
 
 .tools {
@@ -266,13 +274,13 @@ main {
   flex-direction: column;
   gap: 0.375rem;
 }
-.tools .tool_container--element img {
+.tools .tools_container .tool_container--element img {
   width: 3.75rem;
   height: 3.75rem;
   margin: 0.9375rem;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
-.tools .tool_container--element img:hover {
+.tools .tools_container .tool_container--element img:hover {
   transform: scaleX(1.1) scaleY(1.1);
   filter: brightness(0) invert(1);
 }
@@ -422,32 +430,6 @@ main {
   bottom: 0.25rem;
   z-index: -1;
 }
-@media (min-width: 40rem) {
-  .resume .resume__timeline-container .resume__timeline {
-    grid-template-columns: 1fr var(--line-w) 1fr;
-  }
-  .resume .resume__timeline-container .resume__timeline::before {
-    grid-column: 2;
-  }
-  .resume .resume__timeline-container .resume__timeline .resume__timeline-item:nth-child(odd) {
-    grid-column: 1;
-  }
-  .resume .resume__timeline-container .resume__timeline .resume__timeline-item:nth-child(odd) .resume__timeline-date::before {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%);
-    left: 0;
-  }
-  .resume .resume__timeline-container .resume__timeline .resume__timeline-item:nth-child(odd) .resume__timeline-date::after {
-    transform: translate(-50%, -50%);
-    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
-  }
-  .resume .resume__timeline-container .resume__timeline .resume__timeline-item:nth-child(even) {
-    grid-column: 3;
-  }
-  .resume .resume__timeline-container .resume__timeline .resume__timeline-item:nth-child(2) {
-    grid-row: 2/4;
-  }
-}
 
 .faq {
   max-width: 87.5rem;
@@ -460,11 +442,6 @@ main {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-}
-.faq p {
-  color: #9F9F9F;
-  font-size: 1rem;
-  text-align: justify;
 }
 .faq .faq_container {
   display: flex;
@@ -564,6 +541,7 @@ footer p {
     justify-content: space-between;
     padding: 1rem;
     background-color: transparent;
+    max-width: 650px;
   }
   nav .menu-toggle {
     display: flex;
@@ -584,7 +562,7 @@ footer p {
     position: absolute;
     top: 45px;
     width: 40%;
-    background-color: rgba(0, 158, 102, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
     padding: 1rem 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -604,11 +582,16 @@ footer p {
   }
   /* Social Bar */
   .socialBar {
-    top: 40%;
-    left: 0.625rem;
+    top: auto;
+    bottom: 0.625rem;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 99;
+    flex-direction: row;
+    position: fixed;
   }
   .aboutme {
+    max-width: 650px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -627,43 +610,128 @@ footer p {
     font-size: 1rem;
   }
   .aboutme .code_editor {
-    padding: 1rem;
     min-width: 50%;
     max-width: 50%;
-    font-family: "Fira Code", monospace;
-    position: relative;
-    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
   }
-  .aboutme .code_header {
-    display: flex;
-    gap: 0.4rem;
-    margin-bottom: 0.5rem;
+  .skills {
+    max-width: 650px;
   }
-  .aboutme .dot {
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
-    display: inline-block;
+  .skills h2 {
+    font-size: 1rem;
   }
-  .aboutme .red {
-    background: #ff5f56;
-  }
-  .aboutme .yellow {
-    background: #ffbd2e;
-  }
-  .aboutme .green {
-    background: #27c93f;
-  }
-  .aboutme pre {
-    margin: 0;
-    white-space: pre-wrap;
-    font-size: 0.85rem;
+  .skills h2 span {
+    font-size: 2rem;
+    left: 150px;
   }
   .skills .skills_container {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .skills .skills_container .skills_container--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    width: 80%;
+    height: 16rem;
+  }
+  .skills .skills_container .skills_container--item img {
+    margin-top: 15px;
+  }
+  .tools {
+    max-width: 650px;
+    flex-direction: column;
+    max-width: 87.5rem;
+    margin: 1.5rem 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .tools .tools_title {
+    max-width: 70%;
+    margin-right: 0rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+  }
+  .resume {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .resume h2 {
+    font-size: 1rem;
+  }
+  .resume h2 span {
+    font-size: 2rem;
+    left: 150px;
+  }
+  .resume .resume__timeline-container .resume__timeline {
+    padding: 0;
+    margin: 0;
+  }
+  .resume .resume__timeline-container .resume__timeline::before {
+    display: none;
+  }
+  .resume .resume__timeline-container .resume__timeline .resume__timeline-item .resume__timeline-date {
+    height: auto;
+    padding: 0.5rem;
+  }
+  .resume .resume__timeline-container .resume__timeline .resume__timeline-item .resume__timeline-title,
+  .resume .resume__timeline-container .resume__timeline .resume__timeline-item .resume__timeline-descr {
+    text-align: justify;
+    margin: 0.8rem 0;
+  }
+  .resume .resume__timeline-container .resume__timeline .resume__timeline-item .resume__timeline-title {
+    overflow: hidden;
+    padding: 0;
+  }
+  .resume .resume__timeline-container .resume__timeline .resume__timeline-item .resume__timeline-descr {
+    padding: 0;
+  }
+  .faq {
+    max-width: 650px;
+  }
+  .faq h2 {
+    color: #009E66;
+    font-size: 1rem;
+  }
+  .faq .faq_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .faq .faq_container .faq_item {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .faq .faq_container .faq_item br {
+    display: none;
+  }
+  .faq .faq_container .faq_item span {
+    margin-right: 0.2rem;
+  }
+  .faq .faq_container .faq_item h3 {
+    width: 100%;
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .faq .faq_container .faq_item p {
+    width: 100%;
+    margin-left: 0;
+    font-size: 0.5rem;
+    text-align: justify;
   }
   footer {
+    max-width: 650px;
     text-align: center;
     background-color: #009E66;
     padding: 0.3rem;

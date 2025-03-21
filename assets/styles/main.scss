@@ -120,12 +120,12 @@ main {
             font-size: 1rem;
             font-weight: 600;
         }
-    
+
         h2 {
             font-size: 1.5rem;
             font-weight: 700;
         }
-    
+
         span {
             color: $white;
             font-weight: 600;
@@ -141,37 +141,37 @@ main {
         font-family: "Fira Code", monospace;
         position: relative;
         box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
-    }
 
-    .code_header {
-        display: flex;
-        gap: 0.4rem;
-        margin-bottom: 0.5rem;
-    }
+        .code_header {
+            display: flex;
+            gap: 0.4rem;
+            margin-bottom: 0.5rem;
+        }
 
-    .dot {
-        width: 0.75rem;
-        height: 0.75rem;
-        border-radius: 50%;
-        display: inline-block;
-    }
+        .dot {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            display: inline-block;
+        }
 
-    .red {
-        background: #ff5f56;
-    }
+        .red {
+            background: #ff5f56;
+        }
 
-    .yellow {
-        background: #ffbd2e;
-    }
+        .yellow {
+            background: #ffbd2e;
+        }
 
-    .green {
-        background: #27c93f;
-    }
+        .green {
+            background: #27c93f;
+        }
 
-    pre {
-        margin: 0;
-        white-space: pre-wrap;
-        font-size: 0.85rem;
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            font-size: 0.85rem;
+        }
     }
 }
 
@@ -193,15 +193,15 @@ main {
         color: $enphasys_color;
         font-size: 1.5rem;
         font-weight: 700;
-    }
 
-    span {
-        color: $white;
-        -webkit-text-stroke-color: rgb(255 255 255 / 20%);
-        font-size: 4rem;
-        position: absolute;
-        z-index: -1;
-        opacity: 0.1;
+        span {
+            color: $white;
+            -webkit-text-stroke-color: rgb(255 255 255 / 20%);
+            font-size: 4rem;
+            position: absolute;
+            z-index: -1;
+            opacity: 0.1;
+        }
     }
 
     .skills_container {
@@ -210,36 +210,46 @@ main {
         gap: 2rem;
         justify-content: center;
         align-items: center;
-    }
 
-    .skills_container--item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 1rem;
-        border: 0.125rem solid transparent;
-        border-radius: 0.5rem;
-        background-color: #1E1E1E;
-        transition: border-color 0.3s ease;
-        width: 19.75rem;
-        height: 17.5rem;
-        text-align: justify;
+        .skills_container--item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border: 0.125rem solid transparent;
+            border-radius: 0.5rem;
+            background-color: #1E1E1E;
+            transition: border-color 0.3s ease;
+            width: 19.75rem;
+            height: 17.5rem;
+            text-align: justify;
 
-        &:hover {
-            border-color: $enphasys_color_hover;
+            .skills_container--item h3 {
+                color: $white;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+
+            p {
+                margin: 0 10px;
+            }
+
+            span {
+                color: $white;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                border-color: $enphasys_color_hover;
+            }
         }
-    }
 
-    .skills_container--item img {
-        width: 4.375rem;
-        height: 4.375rem;
-    }
-
-    .skills_container--item h3 {
-        color: $white;
-        font-size: 1rem;
-        font-weight: 600;
+        .skills_container--item img {
+            width: 4.375rem;
+            height: 4.375rem;
+        }
     }
 }
 
@@ -267,21 +277,23 @@ main {
         display: flex;
         flex-direction: column;
         gap: 0.375rem;
-    }
 
-    .tool_container--element {
-        img {
-            width: 3.75rem;
-            height: 3.75rem;
-            margin: 0.9375rem;
-            transition: transform 0.3s ease, filter 0.3s ease;
+        .tool_container--element {
+            img {
+                width: 3.75rem;
+                height: 3.75rem;
+                margin: 0.9375rem;
+                transition: transform 0.3s ease, filter 0.3s ease;
 
-            &:hover {
-                transform: scaleX(1.1) scaleY(1.1);
-                filter: brightness(0) invert(1);
+                &:hover {
+                    transform: scaleX(1.1) scaleY(1.1);
+                    filter: brightness(0) invert(1);
+                }
             }
         }
     }
+
+
 }
 
 // Resume styles (Experiencia Laboral)
@@ -327,7 +339,6 @@ main {
                 background: rgb(225, 225, 225);
                 border-radius: calc(var(--line-w) / 2);
             }
-
 
             .resume__timeline-item {
                 text-align: justify;
@@ -443,42 +454,6 @@ main {
                     }
                 }
             }
-
-
-
-
-        }
-
-        @media (min-width: 40rem) {
-            .resume__timeline {
-                grid-template-columns: 1fr var(--line-w) 1fr;
-
-                &::before {
-                    grid-column: 2;
-                }
-
-                .resume__timeline-item:nth-child(odd) {
-                    grid-column: 1;
-
-                    .resume__timeline-date::before {
-                        clip-path: polygon(0 0, 100% 0, 100% 100%);
-                        left: 0;
-                    }
-
-                    .resume__timeline-date::after {
-                        transform: translate(-50%, -50%);
-                        left: calc(100% + var(--col-gap) + var(--line-w) / 2);
-                    }
-                }
-
-                .resume__timeline-item:nth-child(even) {
-                    grid-column: 3;
-                }
-
-                .resume__timeline-item:nth-child(2) {
-                    grid-row: 2/4;
-                }
-            }
         }
     }
 }
@@ -495,12 +470,6 @@ main {
         font-size: 1.5rem;
         font-weight: 700;
         text-align: center;
-    }
-
-    p {
-        color: $text;
-        font-size: 1rem;
-        text-align: justify;
     }
 
     .faq_container {
@@ -622,6 +591,7 @@ footer {
         justify-content: space-between;
         padding: 1rem;
         background-color: transparent;
+        max-width: 650px;
 
         .menu-toggle {
             display: flex;
@@ -644,7 +614,7 @@ footer {
             position: absolute;
             top: 45px;
             width: 40%;
-            background-color: rgba($enphasys_color, 0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             text-align: center;
             padding: 1rem 0;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -670,13 +640,18 @@ footer {
 
     /* Social Bar */
     .socialBar {
-        top: 40%;
-        left: 0.625rem;
+        top: auto;
+        bottom: 0.625rem;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 99;
+        flex-direction: row;
+        position: fixed;
     }
 
-    // Who I´m styles (Sobre mí) 
+    // Who I´m styles
     .aboutme {
+        max-width: 650px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -690,7 +665,7 @@ footer {
             h3 {
                 font-size: 1rem;
             }
-    
+
             h2 {
                 font-size: 1rem;
             }
@@ -698,111 +673,165 @@ footer {
 
         /* Editor de Código */
         .code_editor {
-            padding: 1rem;
             min-width: 50%;
             max-width: 50%;
-            font-family: "Fira Code", monospace;
-            position: relative;
-            box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
-        }
-
-        .code_header {
-            display: flex;
-            gap: 0.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .dot {
-            width: 0.75rem;
-            height: 0.75rem;
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        .red {
-            background: #ff5f56;
-        }
-
-        .yellow {
-            background: #ffbd2e;
-        }
-
-        .green {
-            background: #27c93f;
-        }
-
-        pre {
-            margin: 0;
-            white-space: pre-wrap;
-            font-size: 0.85rem;
         }
     }
 
-    // Skills styles (Lenguajes, Frameworks, etc.)
+    // Skills styles
     .skills {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        // gap: 2rem;
-        // margin: 3rem 0;
-        // max-width: 87.5rem;
+        max-width: 650px;
 
-        // h2 {
-        //     color: $enphasys_color;
-        //     font-size: 1.5rem;
-        //     font-weight: 700;
-        // }
+        h2 {
+            font-size: 1rem;
 
-        // span {
-        //     color: $white;
-        //     -webkit-text-stroke-color: rgb(255 255 255 / 20%);
-        //     font-size: 4rem;
-        //     position: absolute;
-        //     z-index: -1;
-        //     opacity: 0.1;
-        // }
+            span {
+                font-size: 2rem;
+                left: 150px;
+            }
+        }
 
         .skills_container {
             display: flex;
             flex-direction: column;
-            // gap: 2rem;
-            // justify-content: center;
-            // align-items: center;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+
+            .skills_container--item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .5rem;
+                padding: 1rem;
+                width: 80%;
+                height: 16rem;
+
+                img {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    // Tools styles
+    .tools {
+        max-width: 650px;
+        flex-direction: column;
+        max-width: 87.5rem;
+        margin: 1.5rem 0;
+        justify-content: center;
+        align-items: center;
+
+        .tools_title {
+            max-width: 70%;
+            margin-right: 0rem;
+            text-align: justify;
+            margin-bottom: 1rem;
+        }
+    }
+
+    // Resume styles
+    .resume {
+        max-width: 650px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            font-size: 1rem;
+
+            span {
+                font-size: 2rem;
+                left: 150px;
+            }
         }
 
-        // .skills_container--item {
-        //     display: flex;
-        //     flex-direction: column;
-        //     align-items: center;
-        //     gap: 1rem;
-        //     padding: 1rem;
-        //     border: 0.125rem solid transparent;
-        //     border-radius: 0.5rem;
-        //     background-color: #1E1E1E;
-        //     transition: border-color 0.3s ease;
-        //     width: 19.75rem;
-        //     height: 17.5rem;
-        //     text-align: justify;
+        .resume__timeline-container {
+            .resume__timeline {
+                padding: 0;
+                margin: 0;
 
-        //     &:hover {
-        //         border-color: $enphasys_color_hover;
-        //     }
-        // }
+                &::before {
+                    display: none;
+                }
 
-        // .skills_container--item img {
-        //     width: 4.375rem;
-        //     height: 4.375rem;
-        // }
+                .resume__timeline-item {
+                    .resume__timeline-date {
+                        height: auto;
+                        padding: 0.5rem;
+                    }
 
-        // .skills_container--item h3 {
-        //     color: $white;
-        //     font-size: 1rem;
-        //     font-weight: 600;
-        // }
+                    .resume__timeline-title,
+                    .resume__timeline-descr {
+                        text-align: justify;
+                        margin: .8rem 0
+                    }
+
+                    .resume__timeline-title {
+                        overflow: hidden;
+                        padding: 0;
+                    }
+
+                    .resume__timeline-descr {
+                        padding: 0;
+                    }
+                }
+            }
+        }
     }
+
+    // FAQ 
+    .faq {
+        max-width: 650px;
+
+        h2 {
+            color: $enphasys_color;
+            font-size: 1rem;
+        }
+
+        .faq_container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .faq_item {
+                padding: 0 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .2rem;
+
+                br {
+                    display: none;
+                }
+
+                span {
+                    margin-right: 0.2rem;
+                }
+
+                h3 {
+                    width: 100%;
+                    font-size: 1rem;
+                    text-align: justify;
+                }
+
+                p {
+                    width: 100%;
+                    margin-left: 0;
+                    font-size: 0.5rem;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+
 
     // Footer
     footer {
+        max-width: 650px;
         text-align: center;
         background-color: $enphasys_color;
         padding: .3rem;
