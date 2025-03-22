@@ -306,15 +306,15 @@ main {
         font-size: 1.5rem;
         font-weight: 700;
         text-align: center;
-    }
 
-    span {
-        color: $white;
-        -webkit-text-stroke-color: rgb(255 255 255 / 20%);
-        font-size: 4rem;
-        position: absolute;
-        z-index: -1;
-        opacity: 0.1;
+        span {
+            color: $white;
+            -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
+            font-size: 4rem;
+            position: absolute;
+            z-index: -1;
+            opacity: 0.1;
+        }
     }
 
     .resume__timeline-container {
@@ -349,7 +349,6 @@ main {
                 display: grid;
                 grid-template-rows: min-content min-content min-content;
                 --accent-color: $enphasys_color;
-
                 opacity: 0;
                 transform: translateY(30px);
                 transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -368,15 +367,15 @@ main {
                     height: var(--dateH);
                     margin-inline: calc(var(--inlineP) * -1);
                     text-align: center;
-                    background-color: $enphasys_color;
-                    color: white;
+                    background-color: #009E66;
+                    color: $white;
                     font-size: 1rem;
                     font-weight: 700;
                     display: grid;
                     place-content: center;
                     position: relative;
                     border-radius: 4px;
-                    font-family: 'Lexend Giga';
+                    font-family: "Lexend Giga";
                     font-weight: 400;
                     text-transform: uppercase;
 
@@ -411,33 +410,6 @@ main {
                     background: var(--bgColor);
                     position: relative;
                     padding-inline: 1.5rem;
-                }
-
-                .resume__timeline-title {
-                    overflow: hidden;
-                    padding-block-start: 1.5rem;
-                    padding-block-end: 1rem;
-                    font-weight: 300;
-                    font-family: 'Poppins', sans-serif;
-                    color: $white;
-
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        width: 90%;
-                        height: 0.5rem;
-                        background: rgba(0, 0, 0, 0.5);
-                        left: 50%;
-                        border-radius: 50%;
-                        filter: blur(4px);
-                        transform: translate(-50%, 50%);
-                        bottom: calc(100% + 0.125rem);
-                    }
-                }
-
-                .resume__timeline-descr {
-                    padding-block-end: 1.5rem;
-                    font-weight: 300;
 
                     &::before {
                         content: "";
@@ -453,10 +425,60 @@ main {
                         z-index: -1;
                     }
                 }
+
+                .resume__timeline-title {
+                    overflow: hidden;
+                    padding-block-start: 1.5rem;
+                    padding-block-end: 1rem;
+                    font-weight: 300;
+                    font-family: "Poppins", sans-serif;
+                    color: $white;
+
+                    &::before {
+                        bottom: calc(100% + 0.125rem);
+                    }
+                }
+
+                .resume__timeline-descr {
+                    padding-block-end: 1.5rem;
+                    font-weight: 300;
+                }
             }
         }
     }
-}
+
+    @media (min-width: 40rem) {
+        .resume__timeline-container .resume__timeline {
+            grid-template-columns: 1fr var(--line-w) 1fr;
+
+            &::before {
+                grid-column: 2;
+            }
+
+            .resume__timeline-item:nth-child(odd) {
+                grid-column: 1;
+
+                .resume__timeline-date::before {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%);
+                    left: 0;
+                }
+
+                .resume__timeline-date::after {
+                    transform: translate(-50%, -50%);
+                    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+                }
+            }
+
+            .resume__timeline-item:nth-child(even) {
+                grid-column: 3;
+            }
+
+            .resume__timeline-item:nth-child(2) {
+                grid-row: 2 / 4;
+            }
+        }
+    }
+} 
 
 // FAQ styles (Preguntas Frecuentes)
 .faq {
