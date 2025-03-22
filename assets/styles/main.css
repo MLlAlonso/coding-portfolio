@@ -600,13 +600,7 @@ footer p {
   }
   /* Social Bar */
   .socialBar {
-    top: auto;
-    bottom: 0.625rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 99;
-    flex-direction: row;
-    position: fixed;
+    display: none;
   }
   .aboutme {
     max-width: 650px;
@@ -745,7 +739,7 @@ footer p {
   .faq .faq_container .faq_item p {
     width: 100%;
     margin-left: 0;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     text-align: justify;
   }
   footer {
