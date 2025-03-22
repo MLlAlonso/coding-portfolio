@@ -26,3 +26,19 @@
         transform: translateY(-5px);
     }
 }
+
+.portfolio {
+    button {
+        padding: 10px 20px;
+        font-size: .8rem;
+        background-color: transparent;
+        color: $enphasys_color;
+        border-color: $enphasys_color;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
