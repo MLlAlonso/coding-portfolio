@@ -178,6 +178,11 @@ main {
 .portfolio {
     max-width: 1400px;
     margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
 
     h2 {
         color: $enphasys_color;
@@ -188,7 +193,7 @@ main {
         span {
             color: $white;
             -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
-            font-size: 4rem;
+            font-size: 2.5rem;
             position: absolute;
             z-index: -1;
             opacity: 0.1;
