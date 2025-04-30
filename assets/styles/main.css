@@ -270,6 +270,18 @@ a {
             clip-path: var(--clip-four);
   }
 }
+@media (max-width: 768px) {
+  .link_container {
+    max-width: 500px;
+  }
+  .link_wrapper {
+    height: 35px;
+    width: 80px;
+  }
+  .btn {
+    font-size: 6px;
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
   color: #9F9F9F;
