@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'buttons';
+@import 'cards';
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -175,6 +176,7 @@ main {
     }
 }
 
+// porfolio styles (Portafolio)
 .portfolio {
     max-width: 1400px;
     margin: 3rem 0;
@@ -199,6 +201,17 @@ main {
             opacity: 0.1;
         }
     }
+}
+
+.porfolio_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 // Skills styles (Lenguajes, Frameworks, etc.)
@@ -499,7 +512,7 @@ main {
             }
         }
     }
-} 
+}
 
 // FAQ styles (Preguntas Frecuentes)
 .faq {
@@ -696,8 +709,8 @@ footer {
         text-align: justify;
 
         .aboutme_text {
-            min-width: 50%;
-            max-width: 50%;
+            min-width: 70%;
+            max-width: 70%;
 
             h3 {
                 font-size: 1rem;
@@ -710,9 +723,17 @@ footer {
 
         /* Editor de Código */
         .code_editor {
-            min-width: 50%;
-            max-width: 50%;
+            min-width: 70%;
+            max-width: 70%;
         }
+    }
+    
+
+    // porfolio styles (Portafolio)
+    .porfolio_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
     }
 
     // Skills styles
