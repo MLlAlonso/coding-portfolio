@@ -2,10 +2,17 @@
 @import 'buttons';
 @import 'cards';
 
+:root {
+  $background-color: #0D0A0B;
+}
+// .light-theme {
+//   $background-color: #FFFFFC;
+// }
+
 body {
     font-family: 'Poppins', sans-serif;
     color: $text;
-    background-color: $black;
+    background-color: $background-color;
     margin: 0;
     padding: 0;
 }
@@ -79,7 +86,6 @@ header {
     height: 80vh;
     justify-content: center;
     gap: 0.125rem;
-    background-image: url('../img/head.png');
     background-size: cover;
     background-position: center;
 
@@ -93,7 +99,7 @@ header {
         font-size: 1.5rem;
         max-width: 50%;
     }
-}
+}    
 
 main {
     display: flex;
@@ -728,7 +734,6 @@ footer {
         }
     }
     
-
     // porfolio styles (Portafolio)
     .portfolio_container {
         grid-template-columns: repeat(2, 1fr);

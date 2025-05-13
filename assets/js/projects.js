@@ -30,3 +30,10 @@
         // Dispara el filtro por defecto al cargar la página
         document.querySelector('input[type="radio"][name="btn"]:checked').dispatchEvent(new Event('change'));
     });
+
+    document.querySelectorAll('.card').forEach(card => {
+            const img = card.querySelector('img.bg-source');
+            if (img) {
+                card.style.setProperty('--bg-img', `url('${img.src}')`);
+            }
+        });
