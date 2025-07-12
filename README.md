@@ -19,24 +19,4 @@ Repositorio para el desarrollo de una landing page con tecnologías modernas y b
 - 🛠️ **Información Profesional**: Destaca experiencia y habilidades técnicas en un formato claro y estructurado.
 - 🎨 **Optimización de Estilos**: Implementación con SASS y metodología BEM para un código más limpio y mantenible.
 
-## 🛠️ Cómo Usar
-
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
-   ```
-2. Navegar al directorio del proyecto:
-   ```bash
-   cd tu-repositorio
-   ```
-3. Instalar dependencias (si aplicable):
-   ```bash
-   npm install
-   ```
-4. Iniciar un servidor local para desarrollo:
-   ```bash
-   npm run dev
-   ```
-5. Personalizar el contenido y estilos según tus necesidades.
-
 📌 **Desarrollado por Mikkel Llaven Alonso** - mikkel_03@outlook.com
