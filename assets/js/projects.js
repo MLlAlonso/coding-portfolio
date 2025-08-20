@@ -5,6 +5,7 @@
 
         // Mapeo de IDs a palabras clave de filtrado
         const filters = {
+            'value-1': 'general',
             'value-1': 'web',
             'value-2': 'full-stack',
             'value-3': 'backend',
