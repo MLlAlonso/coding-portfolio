@@ -9,6 +9,14 @@ a {
   text-decoration: none;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  color: #9F9F9F;
+  background-color: #0d0a0b;
+  margin: 0;
+  padding: 0;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;

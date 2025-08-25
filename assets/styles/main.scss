@@ -6,14 +6,6 @@
 //   $background-color: #FFFFFC;
 // }
 
-body {
-  font-family: "Poppins", sans-serif;
-  color: $text;
-  background-color: #0d0a0b;
-  margin: 0;
-  padding: 0;
-}
-
 /*------------------------------------*\
   #Social Bar styles
 \*------------------------------------*/
@@ -102,6 +94,12 @@ header {
   h2 {
     font-size: 1.5rem;
     max-width: 50%;
+  }
+
+  .header_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
