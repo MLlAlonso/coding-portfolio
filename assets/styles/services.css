@@ -75,6 +75,9 @@ body {
   color: #FFFFFC;
 }
 
+/*------------------------------------*\
+  #Services styles (Servicios)
+\*------------------------------------*/
 .services-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -221,6 +224,69 @@ body {
   transition: opacity 0.5s, max-height 0.5s, padding 0.5s;
 }
 
+/*------------------------------------*\
+  #FAQ styles (Preguntas Frecuentes)
+\*------------------------------------*/
+.faq {
+  max-width: 87.5rem;
+  margin: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.faq h2 {
+  color: #009E66;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.faq .faq_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.faq .faq_container .faq_item {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.faq .faq_container .faq_item span {
+  color: #009E66;
+  margin-right: 0.5rem;
+}
+
+.faq .faq_container .faq_item h3 {
+  width: 43.75rem;
+  color: #FFFFFC;
+  font-size: 1.5rem;
+}
+
+.faq .faq_container .faq_item p {
+  width: 40.625rem;
+  margin-left: 1.875rem;
+  font-size: 0.875rem;
+}
+
+/*------------------------------------*\
+  #FOOTER styles (Pie de pagina)
+\*------------------------------------*/
 .main-footer {
   text-align: center;
   padding: 1rem 0;
